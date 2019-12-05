@@ -8,7 +8,26 @@ def selection_sort( arr ):
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc) 
         for j in range(cur_index, len(arr)):
-                 
+            ## write if statement here
+            if arr[j] < arr[smallest_index]:
+                smallest_index = j
+
+        temp_hold = arr[cur_index]
+        arr[cur_index] = arr[smallest_index]
+        arr[smallest_index] = temp_hold
+        # print(f'smallest {smallest_index}')
+    return arr
+                
+
+#    For all indices EXCEPT the last index:
+
+# a. Loop through elements on right-hand-side of 
+# current index and find the smallest element
+
+# b. Swap the element at current index with the 
+# smallest element found in above loop
+
+                
 
 
 
