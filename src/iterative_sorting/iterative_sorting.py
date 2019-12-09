@@ -27,13 +27,16 @@ def selection_sort( arr ):
 
 
 # TO-DO:  implement the Bubble Sort function below
-def bubble_sort2( arr ):
+def bubble_sort( arr ):
     for i in range(len(arr) - 1):
+        print(f'i {i}')
         for j in range(len(arr) - 1):
             if arr[j] > arr[j + 1]:
+                print(f'j {j}')
                 temp = arr[j]
                 arr[j] = arr[j + 1]
                 arr[j + 1] = temp
+                print(f'j X 2:  {j}')
         #for each element in list look at element to its right
         #if out of order to each other, (val on left > val on right)
         # swap them! 
@@ -41,14 +44,13 @@ def bubble_sort2( arr ):
         # once highest value element is at the end, it remains there.
     return arr
 
-def bubble_sort( arr ):
+def bubble_sort2( arr ):
     swap = True
     while swap:
         swap = False
         for i in range(0, len(arr) - 1):
             largest_index = i
             if arr[largest_index] > arr[largest_index + 1]:
-                #    arr[largest_index] = arr[largest_index + 1]
                 temp = arr[largest_index]
                 arr[largest_index] = arr[largest_index + 1]
                 arr[largest_index + 1] = temp
